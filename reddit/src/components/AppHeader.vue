@@ -1,6 +1,6 @@
 <script setup>
-import useAuthUser from '@/composables/UseAuthUser'
-const { isLoggedIn } = useAuthUser()
+import authuser from '../composables/authuser.js'
+const { isLoggedIn } = authuser()
 </script>
 <template>
   <div class="flex bg-gray-500 text-white justify-between">

@@ -4,7 +4,7 @@ import { ref } from 'vue'
 // so that it will act as global state and always refer to a single user
 const user = ref(null)
 
-export default function useAuthUser() {
+export default function authuser() {
   /**
    * Login with email and password
    */

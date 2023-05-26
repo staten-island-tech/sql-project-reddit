@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import authuser from '../src/authuser.js'
+import authuser from '../composables/authuser.js'
 import { useRouter } from 'vue-router'
 
 // Use necessary composables
