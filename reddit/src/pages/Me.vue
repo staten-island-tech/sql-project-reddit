@@ -4,7 +4,8 @@ const { user } = useAuthUser();
 </script>
 
 <template>
-  <div v-if="user">
-    <div>Hello {{ user.user_metadata.name }}</div>
+  <div v-if="user.value">
+    <div>Hello {{ user.value.user_metadata.name }}</div>
   </div>
 </template>
+

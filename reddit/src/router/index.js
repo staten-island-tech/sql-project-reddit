@@ -51,14 +51,19 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to) => {
+router.beforeEach(async (to, from, next) => {
   const { isLoggedIn } = useAuthUser();
-  if (
-    !isLoggedIn() &&
-    to.meta.requiresAuth &&
-    !Object.keys(to.query).includes("fromEmail")
-  ) {
-    return { name: "Login" };
+
+  if (to.meta.requiresAuth && !isLoggedIn()) {
+    // If the route requires authentication and the user is not logged in,
+    // redirect to the Login page
+    next({ name: "Login" });
+  } else if (to.name === "Login" && isLoggedIn()) {
+    // If the user is already logged in and tries to access the Login page,
+    // redirect to the Home page
+    next({ name: "Home" });
+  } else {
+    next();
   }
 });
 
