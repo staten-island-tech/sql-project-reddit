@@ -10,7 +10,12 @@ import { RouterLink } from 'vue-router'
     </nav>
     <h1>Hadestown Playlist</h1>
     <div class="display">
-      <HadestownCards v-for="song in songs" :key="song.name" :name="song.name" :ranking="song.ranking" />
+      <HadestownCards
+        v-for="song in songs"
+        :key="song.name"
+        :name="song.name"
+        :ranking="song.ranking"
+      />
     </div>
   </div>
 </template>
