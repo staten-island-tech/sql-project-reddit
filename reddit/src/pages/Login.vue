@@ -1,30 +1,28 @@
 <script setup>
-import { ref } from "vue";
-import useAuthUser from "@/composables/UseAuthUser";
-import { useRouter } from "vue-router";
+import { ref } from 'vue'
+import useAuthUser from '@/composables/UseAuthUser'
+import { useRouter } from 'vue-router'
 
 // Use necessary composables
-const router = useRouter();
-const { login, loginWithSocialProvider } = useAuthUser();
+const router = useRouter()
+const { login, loginWithSocialProvider } = useAuthUser()
 
 // keep up with form data
 const form = ref({
-  email: "",
-  password: "",
-});
+  email: '',
+  password: ''
+})
 
 // call the proper login method from the AuthUser composable
 // on the submit of the form
 const handleLogin = async (provider) => {
   try {
-    provider
-      ? await loginWithSocialProvider(provider)
-      : await login(form.value);
-    router.push({ name: "Me" });
+    provider ? await loginWithSocialProvider(provider) : await login(form.value)
+    router.push({ name: 'Me' })
   } catch (error) {
-    alert(error.message);
+    alert(error.message)
   }
-};
+}
 </script>
 <template>
   <div class="max-w-lg m-auto">
@@ -35,12 +33,8 @@ const handleLogin = async (provider) => {
       <button>Login</button>
       <router-link to="/forgotPassword">Forgot Password?</router-link>
     </form>
-    <div class="mt-5">
-      <a @click.prevent="handleLogin('github')">Github</a>
-    </div>
   </div>
 </template>
-
 
 <style>
 /* Add your custom CSS styles here */
