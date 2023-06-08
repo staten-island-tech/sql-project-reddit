@@ -1,0 +1,96 @@
+@import './base.css';
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  font-family: 'Bitter', serif;
+}
+:root {
+  --black: #000;
+  --white: #ffffff;
+  --color1: #362a1d;
+  --color2: #fbeec7;
+  --color3: #b50d15;
+  --color4: #1b150e;
+  --color5: #ffebd7;
+  --color6: #8294c4;
+  --color7: #184a76;
+
+  /*Intentions*/
+  --primary: var(--color1);
+  --secondary: var(--color2);
+  --tertiary: var(--color3);
+  --fourth: var(--color4);
+
+  /*Typography*/
+  --h1: 7.594rem;
+  --h2: 4.813rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  margin-bottom: 2rem;
+  font-size: 7rem;
+  color: var(--tertiary);
+}
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+body {
+  background-color: var(--primary);
+}
+button,
+button:link,
+button:visited {
+  transition: all 0.2s;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 1rem rgba(0, 0, 0, 0.2);
+}
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+  text-align: center;
+}
+
+a,
+.blue {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: 0.4s;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(0, 0%, 60%, 0.123);
+  }
+}
