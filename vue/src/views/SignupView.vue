@@ -1,69 +1,109 @@
 <template>
   <nav>
-    <RouterLink to="/">return</RouterLink>
-    <RouterLink to="/login">Login</RouterLink>
+    <router-link to="/">Logout</router-link>
+    <router-link to="/createnew">Make a Post</router-link>
+    <router-link to="/organshop">Public Posts</router-link>
+    <router-link to="/Signup">About Me</router-link>
   </nav>
-  <h1>Signup</h1>
-  <div class="signup">
-    <form class="reqs">
-      <label for="email">Email:</label> <input type="text" id="email" v-model="email" />
-      <label for="username">Username:</label>
-      <input type="text" id="username" v-model="username" />
-      <label for="password">Password:</label>
-      <input type="password" id="password" v-model="password" />
-    </form>
-    <button class="signupbtn" @click="SignUp()">Signup</button>
-    <nav>
-      <RouterLink to="/login" class="login">Already have an account? Login!</RouterLink>
-    </nav>
-  </div>
+
+  <main>
+    <div class="watchnav">
+      <watch-button class="Watchbutton" @click="toggleWatchDiv">About Me #</watch-button>
+    </div>
+    <div v-show="watchdiv" class="watchdiv">
+      <div class="watchitemsdiv">
+        <h3>My Hashtags</h3>
+        <watch
+          v-for="item in store.watch"
+          :key="item.film"
+          :name="item.film"
+          :rating="item.rating"
+          :image="item.image"
+        ></watch>
+      </div>
+    </div>
+    <div class="disney">
+      <card
+        v-for="disney in disneys"
+        :key="disney.film"
+        :name="disney.film"
+        :image="disney.image"
+        :description="disney.description"
+      ></card>
+    </div>
+  </main>
 </template>
 
-<script setup>
-import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
-import { supabase } from '../Client/supabaseClient.js'
-const email = ref('')
-const username = ref('')
-const password = ref('')
+<script>
+import Card from '../components/Card.vue'
+import AddToWatchButton from '../components/AddToWatch.vue'
+import WatchButton from '../components/WatchButton.vue'
+import Watch from '../components/Watch.vue'
+import { store } from '../components/store.js'
+
+export default {
+  name: 'Disney',
+  components: {
+    Card,
+    AddToWatchButton,
+    WatchButton,
+    Watch
+  },
+  data() {
+    return {
+      store,
+      watchdiv: false,
+      disneys: [
+        {
+          film: 'Mexican',
+          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+        },
+        {
+          film: 'Nyc',
+          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+        },
+        {
+          film: 'Compsci',
+          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+        },
+        {
+          film: 'Mandolorian',
+          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+        }
+      ]
+    }
+  },
+  methods: {
+    toggleWatchDiv() {
+      this.watchdiv = !this.watchdiv
+    }
+  }
+}
 </script>
 
 <style scoped>
-.signup {
+.disney,
+.watchdiv,
+.watchnav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.watchdiv {
+  width: 700px;
+  background-color: rgb(121, 202, 246);
+  text-align: center;
+  padding: 15px;
   margin: auto;
-  padding: 2rem;
-  font-size: 6rem;
-  font-family: 'Jaldi', sans-serif;
-  background: var(--secondary);
-  width: 60rem;
-  border-radius: 20px;
-  color: var(--tertiary);
-  border: 0.5rem solid var(--fourth);
-  box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  border-radius: 50px;
 }
-.login {
-  font-size: 2rem;
-  margin-top: 1rem;
-  color: var(--tertiary);
-  display: flex;
-  flex-direction: column;
+* {
+  color: rgb(77, 30, 30);
 }
-.reqs {
-  display: flex;
-  flex-direction: column;
-}
-.signupbtn {
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  border: none;
-  border-radius: 15px;
-  width: 12rem;
-  color: var(--tertiary);
-}
-#username,
-#email,
-#password {
-  border: none;
-  height: 40px;
+h3 {
+  font-family: 'New Walt Disney Font', sans-serif;
+  font-size: 2.5vh;
+  font-weight: bold;
 }
 </style>

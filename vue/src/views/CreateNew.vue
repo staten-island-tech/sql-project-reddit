@@ -3,6 +3,7 @@
     <RouterLink to="/">Logout</RouterLink>
     <RouterLink to="/createnew">Make a Post</RouterLink>
     <RouterLink to="/organshop">Public Posts</RouterLink>
+    <RouterLink to="/Signup">About Me</RouterLink>
   </nav>
 
   <div class="createnew">
