@@ -1,15 +1,10 @@
 <template>
   <nav>
-    <RouterLink to="/organshop">Public Posts</RouterLink>
+    <RouterLink to="/">Home Page</RouterLink>
     <RouterLink to="/createnew">Make a Post</RouterLink>
     <RouterLink to="/login">Logout</RouterLink>
+    <RouterLink to="/organshop">Public Posts</RouterLink>
   </nav>
-
-  <!--  <form class="help">
-     <label for="namedelete">Item Name You Want to Delete:</label>
-    <input type="text" id="namedelete" v-model="namedelete" />
-    <button class="delete" @click="Delete()">Delete!</button>
-  </form> -->
 
   <div class="organshop">
     <h1>Public Posts</h1>
