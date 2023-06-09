@@ -30,7 +30,7 @@ const cost = ref('')
 const info = ref([])
 
 async function pleasework() {
-  let { data } = await supabase.from('gonnalosemymind').select('*')
+  let { data } = await supabase.from('clown').select('*')
   info.value = data
   console.log(data)
 }
@@ -44,7 +44,7 @@ async function pleaseworkpt2() {
 async function Create() {
   console.log('test')
   try {
-    await supabase.from('gonnalosemymind').insert([
+    await supabase.from('clown').insert([
       {
         name: name.value,
         birthday: birthday.value,

@@ -24,14 +24,14 @@ import { supabase } from '../Client/supabaseClient.js'
 const info = ref([])
 
 async function pleasework() {
-  let { data } = await supabase.from('gonnalosemymind').select('*')
+  let { data } = await supabase.from('clown').select('*')
   info.value = data
   console.log(data)
 }
 
 async function Delete() {
   try {
-    await supabase.from('gonnalosemymind').delete().match({ name: 'help' })
+    await supabase.from('clown').delete().match({ name: 'help' })
   } catch (error) {
     console.log('catch')
     console.log(error)
