@@ -49,11 +49,11 @@ onMounted(() => {
   padding: 2rem;
   font-size: 6rem;
   font-family: 'Jaldi', sans-serif;
-  background: var(--secondary);
+  background: white;
   width: 120rem;
   border-radius: 3rem;
-  color: var(--tertiary);
-  border: 0.5rem solid var(--fourth);
+  color: orange;
+  border: 0.5rem solid whitesmoke;
   box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
 }
 .organcards {
@@ -75,14 +75,5 @@ h2 {
 }
 p {
   font-size: 2rem;
-}
-.delete {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  border: none;
-  border-radius: 15px;
-  width: 10rem;
-  color: var(--tertiary);
 }
 </style>

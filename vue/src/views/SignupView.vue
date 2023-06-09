@@ -56,15 +56,15 @@ export default {
       disneys: [
         {
           film: 'Mexican',
-          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+          image: 'https://i.pinimg.com/736x/5b/57/59/5b5759ffb021650b5c0d094245812af6.jpg'
         },
         {
           film: 'Nyc',
-          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+          image: 'https://i.pinimg.com/originals/c5/5b/f2/c55bf2415fc595f8b80905118473d097.jpg'
         },
         {
           film: 'Compsci',
-          image: 'https://i.pinimg.com/736x/71/30/05/71300593668fe1a1dad0f4fa4ff0a084.jpg'
+          image: 'https://i.pinimg.com/originals/64/a4/c2/64a4c212a61a5c47f4b859d4b2046d0c.jpg'
         },
         {
           film: 'Mandolorian',

@@ -17,22 +17,22 @@ h1 {
   font-family: "Andale Mono", monospace;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: var(--tertiary);
+  color: white;
 }
 h2 {
-  font-size: var(--h2);
+  font-size: white;
 }
 
 h3 {
-  font-size: var(--h3);
+  font-size: white;
 }
 
 h4 {
-  font-size: var(--h4);
+  font-size:  white;
 }
 
 h5 {
-  font-size: var(--h5);
+  font-size:  white;
 }
 h1,
 h2,
@@ -42,7 +42,7 @@ h5 {
   text-align: center;
 }
 body {
-  background-color: var(--primary);
+  background-color: orange;
 }
 button,
 button:link,

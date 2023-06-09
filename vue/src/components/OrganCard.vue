@@ -73,6 +73,7 @@ img {
 }
 h2 {
   font-size: 3vh;
+  color: white;
 }
 .desc {
   color: aliceblue; /* sry i just needed it to stop giving me errors  */
