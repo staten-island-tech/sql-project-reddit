@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <RouterLink to="/organshop">Store</RouterLink>
-    <RouterLink to="/createnew">New Listing</RouterLink>
+    <RouterLink to="/organshop">Public Posts</RouterLink>
+    <RouterLink to="/createnew">Make a Post</RouterLink>
     <RouterLink to="/login">Logout</RouterLink>
   </nav>
 

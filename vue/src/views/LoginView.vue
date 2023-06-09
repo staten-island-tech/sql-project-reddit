@@ -4,9 +4,9 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <nav>
-    <RouterLink to="/">Store</RouterLink>
+    <RouterLink to="/">Home Page</RouterLink>
     <RouterLink to="/login">Login</RouterLink>
-    <RouterLink to="organshop">Store Pt2</RouterLink>
+    <RouterLink to="organshop">Public Posts</RouterLink>
   </nav>
   <h1>Login</h1>
   <div class="login">
