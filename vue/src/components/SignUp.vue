@@ -3,10 +3,14 @@
     <h1>Sign Up</h1>
     <br />
     <form>
+         <div class="input-group">
       <label for="email">Email: </label>
       <input type="email" id="email" v-model="email" />
+      </div>
+         <div class="input-group">
       <label for="password">Password: </label>
       <input type="password" id="password" v-model="password" />
+      </div>
       <br />
       <button type="button" @click="SignUp()">Enter</button>
     </form>
@@ -54,15 +58,43 @@ export default {
 #signUp {
   display: flex;
   flex-direction: column;
-  margin: 5px auto;
-  padding: 0rem 20rem;
+  justify-content: center;
   align-items: center;
+  margin: 50px auto; /* Adjust the margin-top value as desired */
+  padding: 0rem 20rem;
+  background-color: #0d1b2a; /* Set the background color to #0d1b2a */
 }
-button {
+
+h1 {
+  font-size: 4rem;
+  color: #e0e1dd; /* Set the font color to #e0e1dd */
+}
+
+.input-group {
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
+
+label,
 input {
+  color: #415a77; /* Set the color of labels and inputs to #415a77 */
+}
+
+.input {
+  width: 300px; /* Adjust the width as desired */
+  height: 50px; /* Adjust the height as desired */
+  font-size: 1.6rem; /* Adjust the font size as desired */
+}
+
+.button {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Adjust the width as desired */
+  height: 60px; /* Adjust the height as desired */
+  font-size: 1.8rem; /* Adjust the font size as desired */
+  margin: 10px auto;
 }
 </style>

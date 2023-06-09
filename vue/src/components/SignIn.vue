@@ -3,10 +3,14 @@
     <h1>Sign In</h1>
     <br />
     <form>
+         <div class="input-group">
       <label for="email">Email: </label>
       <input type="email" id="email" v-model="email" />
+      </div>
+         <div class="input-group">
       <label for="password">Password: </label>
-      <input type="password" v-model="password" id="password" />
+      <input type="password" id="password" v-model="password" />
+      </div>
       <br />
       <button type="button" @click="SignIn()">Enter</button>
     </form>
@@ -58,21 +62,48 @@ export default {
 }
 </script>
 
+
 <style scoped>
 #signIn {
   display: flex;
   flex-direction: column;
-  margin: 5px auto;
-  padding: 0rem 20rem;
+  justify-content: center;
   align-items: center;
+  margin: 50px auto; /* Adjust the margin-top value as desired */
+  padding: 0rem 20rem;
+    background-color: #0d1b2a;
 }
 
-button {
+.input-group {
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+h1{
+ font-size: 4rem;
+ color: #415a77;
+}
+
+label,
 input {
+ color: #e0e1dd; 
+}
+
+.input {
+  width: 300px; /* Adjust the width as desired */
+  height: 50px; /* Adjust the height as desired */
+  font-size: 1.6rem; /* Adjust the font size as desired */
+}
+
+.button {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Adjust the width as desired */
+  height: 60px; /* Adjust the height as desired */
+  font-size: 1.8rem; /* Adjust the font size as desired */
+  margin: 10px auto;
 }
 </style>

@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style scoped>
+
 div {
   display: flex;
   flex-direction: column;
@@ -48,4 +49,6 @@ h4 {
 h4:hover {
   color: #0e9af1;
 }
+
+
 </style>

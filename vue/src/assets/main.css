@@ -4,18 +4,19 @@ html,
 body,
 * {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 110%;
   padding: 0;
   margin: 0;
   text-align: center;
   align-items: center;
-  font-family: 'Bitter', serif;
+  font-family: "Andale Mono", monospace;
+  background-color: #0d1b2a;
 }
 
 h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Andale Mono", monospace;
   margin-bottom: 2rem;
-  font-size: 7rem;
+  font-size: 2rem;
   color: var(--tertiary);
 }
 h2 {
@@ -47,6 +48,7 @@ button,
 button:link,
 button:visited {
   transition: all 0.2s;
+  color: #e0e1dd;
 }
 button:hover {
   transform: translateY(-2px);
