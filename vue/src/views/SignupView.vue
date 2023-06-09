@@ -36,7 +36,7 @@
 
 <script>
 import Card from '../components/Card.vue'
-import AddToWatchButton from '../components/AddToWatch.vue'
+import AddToWatchButton from '../components/AddtoWatch.vue'
 import WatchButton from '../components/WatchButton.vue'
 import Watch from '../components/Watch.vue'
 import { store } from '../components/store.js'
