@@ -1,7 +1,7 @@
 <template>
   <nav>
     <RouterLink to="/">Home Page</RouterLink>
-    <RouterLink to="/Login">login</RouterLink>
+    <RouterLink to="/Login">Login</RouterLink>
     <RouterLink to="/organshop">Public Posts</RouterLink>
   </nav>
 
