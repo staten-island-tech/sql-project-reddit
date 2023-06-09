@@ -3,6 +3,7 @@
     <RouterLink to="/">Home Page</RouterLink>
     <RouterLink to="/Login">Login</RouterLink>
     <RouterLink to="/organshop">Public Posts</RouterLink>
+    <RouterLink to="/CreateNew">Pu</RouterLink>
   </nav>
 
   <div class="organshop">
