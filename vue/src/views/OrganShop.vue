@@ -17,7 +17,7 @@
       <div class="organcards">
         <h2>{{ items.name }}</h2>
         <p>Description: {{ items.description }}</p>
-        <p>Cost: ${{ items.cost }}</p>
+        <p>Date: {{ items.cost }}</p>
       </div>
     </sub>
   </div>
