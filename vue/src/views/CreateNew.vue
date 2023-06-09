@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { supabase } from '../lib/supabaseClient.js'
+import { supabase } from '../Client/supabaseClient.js'
 const name = ref('')
 const birthday = ref('')
 const description = ref('')

@@ -25,7 +25,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { supabase } from '../lib/supabaseClient.js'
+import { supabase } from '../Client/supabaseClient.js'
 const info = ref([])
 
 async function pleasework() {
