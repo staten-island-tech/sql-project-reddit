@@ -36,7 +36,7 @@ async function pleasework() {
 }
 
 async function pleaseworkpt2() {
-  let { data } = await supabase.from('costs').select('*')
+  let { data } = await supabase.from('clown').select('*')
   info.value = data
   console.log(data)
 }
