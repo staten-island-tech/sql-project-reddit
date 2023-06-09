@@ -1,4 +1,4 @@
-@import './base.css';
+
 
 html,
 body,
@@ -10,30 +10,6 @@ body,
   text-align: center;
   align-items: center;
   font-family: 'Bitter', serif;
-}
-:root {
-  --black: #000;
-  --white: #ffffff;
-  --color1: #362a1d;
-  --color2: #fbeec7;
-  --color3: #b50d15;
-  --color4: #1b150e;
-  --color5: #ffebd7;
-  --color6: #8294c4;
-  --color7: #184a76;
-
-  /*Intentions*/
-  --primary: var(--color1);
-  --secondary: var(--color2);
-  --tertiary: var(--color3);
-  --fourth: var(--color4);
-
-  /*Typography*/
-  --h1: 7.594rem;
-  --h2: 4.813rem;
-  --h3: 3.375rem;
-  --h4: 2.25rem;
-  --h5: 1.5rem;
 }
 
 h1 {
