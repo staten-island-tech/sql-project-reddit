@@ -1,13 +1,13 @@
 <template>
   <div id="signIn">
     <h1>Sign In</h1>
-    <br>
+    <br />
     <form>
       <label for="email">Email: </label>
       <input type="email" id="email" v-model="email" />
       <label for="password">Password: </label>
       <input type="password" v-model="password" id="password" />
-      <br>
+      <br />
       <button type="button" @click="SignIn()">Enter</button>
     </form>
   </div>
@@ -46,9 +46,9 @@ export default {
           const store = useUserStore()
           store.getUser(json)
           console.log(store.currentUser.user.id)
-          this.$router.push({ path: '/NewView' })
-          email.value=''
-          password.value=''
+          this.$router.push({ path: '/CreateNew' })
+          email.value = ''
+          password.value = ''
         }
       } catch (error) {
         console.log('error')

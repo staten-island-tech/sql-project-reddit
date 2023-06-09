@@ -43,6 +43,7 @@ h4 {
   cursor: pointer;
   text-decoration: underline;
   color: #6ec2f7;
+  font-size: x-large;
 }
 h4:hover {
   color: #0e9af1;
